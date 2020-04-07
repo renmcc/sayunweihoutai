@@ -23,6 +23,7 @@ from blueapps.conf.default_settings import *  # noqa
 INSTALLED_APPS += (
     'home_application',
     'mako_application',
+    'cmdb',
 )
 
 # 这里是默认的中间件，大部分情况下，不需要改动
@@ -75,7 +76,7 @@ STATICFILES_DIRS = [
 IS_USE_CELERY = True
 
 # CELERY 并发数，默认为 2，可以通过环境变量或者 Procfile 设置
-CELERYD_CONCURRENCY = os.getenv('BK_CELERYD_CONCURRENCY', 2)
+CELERYD_CONCURRENCY = os.getenv('BK_CELERYD_CONCURRENCY', 20)
 
 # CELERY 配置，申明任务的文件路径，即包含有 @task 装饰器的函数文件
 CELERY_IMPORTS = (
@@ -86,7 +87,7 @@ LOGGING = get_logging_config_dict(locals())
 
 # 初始化管理员列表，列表中的人员将拥有预发布环境和正式环境的管理员权限
 # 注意：请在首次提测和上线前修改，之后的修改将不会生效
-INIT_SUPERUSER = []
+INIT_SUPERUSER = ['admin','rencaimeng']
 
 
 # 使用mako模板时，默认打开的过滤器：h(过滤html)
@@ -96,7 +97,7 @@ MAKO_DEFAULT_FILTERS = ['h']
 IS_BKUI_HISTORY_MODE = False
 
 # 是否需要对AJAX弹窗登录强行打开
-IS_AJAX_PLAIN_MODE = False
+IS_AJAX_PLAIN_MODE = True
 
 # 国际化配置
 LOCALE_PATHS = (os.path.join(BASE_DIR, 'locale'),)
