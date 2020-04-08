@@ -10,6 +10,7 @@ RUN_MODE = 'DEVELOP'
 
 # APP本地静态资源目录
 STATIC_URL = '/static/'
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # APP静态资源目录url
 # REMOTE_STATIC_URL = '%sremote/' % STATIC_URL
