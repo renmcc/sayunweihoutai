@@ -15,4 +15,5 @@ urlpatterns = [
     url(r'^i18n/', include('django.conf.urls.i18n')),
     #cmdb应用
     url(r'^cmdb/', include('cmdb.urls'))
+
 ]

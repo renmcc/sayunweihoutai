@@ -65,6 +65,8 @@ MIDDLEWARE += (
 # STATIC_VERSION_END
 STATIC_VERSION = '1.0'
 
+
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
