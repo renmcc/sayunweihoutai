@@ -54,7 +54,7 @@ MIDDLEWARE += (
 )
 
 # 所有环境的日志级别可以在这里配置
-# LOG_LEVEL = 'INFO'
+LOG_LEVEL = 'INFO'
 
 # STATIC_VERSION_BEGIN
 # 静态资源文件(js,css等）在APP上线更新后, 由于浏览器有缓存,
